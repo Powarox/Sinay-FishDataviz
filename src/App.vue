@@ -8,7 +8,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
 
     <div id="app">
-        <img alt="Vue logo" src="./assets/logo.png">
+        <nav class="navigation">
+            <section class="nav">
+                <!-- <router-link to="/" id="logo">
+                    <img src="./assets/logo.png" alt="Logo">
+                    Logo
+                </router-link> -->
+                <router-link to="/">Home</router-link>
+            </section>
+        </nav>
+
+        <main class="main">
+            <router-view/>
+        </main>
     </div>
 </template>
 

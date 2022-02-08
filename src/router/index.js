@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import Home from '../views/Home.vue';
-import NotFound from '../views/NotFound.vue';
+// import NotFound from '../views/NotFound.vue';
 
 const routes = [
     {
@@ -11,14 +11,14 @@ const routes = [
             title: 'Sinay - Dataviz',
         }
     },
-    {
-        name: 'NotFound',
-        path: '/:pathMatch(.*)',
-        component: NotFound,
-        meta: {
-            title: '404 Not Found',
-        }
-    }
+    // {
+    //     name: 'NotFound',
+    //     path: '/:pathMatch(.*)',
+    //     component: NotFound,
+    //     meta: {
+    //         title: '404 Not Found',
+    //     }
+    // }
 ]
 
 const router = createRouter({
