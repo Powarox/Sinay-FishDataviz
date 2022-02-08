@@ -35,5 +35,6 @@
 <style lang="css" scoped>
     #home {
         padding: 30px;
+        background: #FFFFFF;
     }
 </style>

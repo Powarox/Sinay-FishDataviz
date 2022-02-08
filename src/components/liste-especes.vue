@@ -2,7 +2,6 @@
     <div id="liste-especes">
         <section class="filter">
             <h2>Filtre ...</h2>
-            <button @click="printData()">Print test</button>
         </section>
 
         <section class="contentCard">
@@ -22,13 +21,13 @@
 </template>
 
 <script>
-    // import DetailsCard from './details-card.vue';
+    import DetailsCard from './details-card.vue';
 
     export default {
         name: 'liste-especes',
         props: ['data'],
         components: {
-            // DetailsCard,
+            DetailsCard,
         },
         methods: {
             printData() {
@@ -46,7 +45,7 @@
 
     .contentCard {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
     }
 </style>
