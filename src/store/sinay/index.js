@@ -18,16 +18,16 @@ export default {
                 .get('https://services-fish-price-dev.sinay.ai/seafoods')
                 .then(response => {
                     data = response.data.data;
-                    console.log(data);
+                    // console.log(data);
                 })
                 .catch(error => {
                     console.log(error);
                 })
-                .finally(() => commit('ADDMESSAGE', data) );
+                .finally(() => commit('UPDATEDATA', data) );
         },
     },
     mutations: {
-        ADDMESSAGE(state, data) {
+        UPDATEDATA(state, data) {
             state.data = data;
         },
     }
