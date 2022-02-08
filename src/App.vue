@@ -25,11 +25,21 @@
 </template>
 
 <script>
+    import { mapActions } from 'vuex';
+
     export default {
         name: 'App',
         components: {
 
-        }
+        },
+        created() {
+            this.fetchDataFromSinayApi();
+        },
+        methods: {
+            ...mapActions([
+                'fetchDataFromSinayApi',
+            ]),
+        },
     }
 </script>
 

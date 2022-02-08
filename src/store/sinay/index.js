@@ -1,24 +1,34 @@
+import axios from "axios";
 
 export default {
     state() {
         return {
-            feedback: false,
-            message: '',
+            data: {},
         }
     },
     getters: {
-        getFeedback(state) {
-            return state.feedback;
+        getData(state) {
+            return state.data;
         },
     },
     actions: {
-        addMessage({commit}, mess) {
-            commit('ADDMESSAGE', mess);
+        fetchDataFromSinayApi({commit}) {
+            let data = {}
+            axios
+                .get('https://services-fish-price-dev.sinay.ai/seafoods')
+                .then(response => {
+                    data = response.data.data;
+                    console.log(data);
+                })
+                .catch(error => {
+                    console.log(error);
+                })
+                .finally(() => commit('ADDMESSAGE', data) );
         },
     },
     mutations: {
-        ADDMESSAGE(state, message) {
-            state.message = message;
+        ADDMESSAGE(state, data) {
+            state.data = data;
         },
     }
 }

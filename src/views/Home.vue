@@ -1,10 +1,11 @@
 <template lang="html">
     <div id="home">
-        <ListEspeces/>
+        <ListEspeces :data="this.data"/>
     </div>
 </template>
 
 <script>
+    import { mapGetters } from 'vuex';
     import ListEspeces from '../components/liste-especes.vue';
 
     export default {
@@ -12,6 +13,22 @@
         components: {
             ListEspeces,
         },
+        data() {
+            return {
+
+            }
+        },
+        methods: {
+
+        },
+        computed: {
+            ...mapGetters([
+                'getLoadData', 'getLoadPrice', 'getData'
+            ]),
+            data() {
+                return this.getData;
+            },
+        }
     }
 </script>
 
