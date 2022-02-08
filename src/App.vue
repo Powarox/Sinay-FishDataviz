@@ -51,6 +51,22 @@
     }
 
     #app {
-        font-family: Avenir, Helvetica, Arial, sans-serif;
+        font-family: 'Cabin', sans-serif;
+    }
+
+    .navigation {
+        padding: 20px;
+        background: #35495E;
+    }
+
+    .navigation .nav a {
+        padding: 10px;
+        color: #FFF;
+        transition: 0.4s;
+    }
+
+    .navigation .nav a:hover {
+        color: #35495E;
+        background: #FFF;
     }
 </style>
