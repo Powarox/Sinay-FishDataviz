@@ -1,6 +1,4 @@
-# sinay-dataviz
-
-# Test technique front
+# Sinay - Dataviz
 
 ## Sujet
 Créer une liste Material Design Angular contenant le nom et le code FAO des espèces.
