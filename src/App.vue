@@ -1,14 +1,19 @@
 <template>
-    <nav class="navigation">
-        <section class="nav">
-            <!-- <router-link to="/" id="logo">
-                <img src="./assets/logo.png" alt="Logo">
-                Logo
-            </router-link> -->
-            <router-link to="/">Home</router-link>
-            <router-link to="/Test">Test</router-link>
-        </section>
-    </nav>
+    <header>
+        <nav class="navigation">
+            <router-link to="/" id="logo">
+                <!-- <img src="./assets/header/sinay-logo.png" alt="Logo"> -->
+                <img src="./assets/header/logo_banner.svg" alt="Logo">
+            </router-link>
+
+            <section class="nav">
+                <router-link to="/">Home</router-link>
+                <router-link to="/Test">Test</router-link>
+                <router-link to="/Test">Autre</router-link>
+            </section>
+        </nav>
+        <!-- <img src="./assets/header/banner.svg" id="banner" alt="une bannière"> -->
+    </header>
 
     <main class="main">
         <router-view/>
@@ -24,7 +29,7 @@
 
         },
         created() {
-            this.fetchDataFromSinayApi();
+            // this.fetchDataFromSinayApi();
         },
         methods: {
             ...mapActions([
@@ -51,22 +56,42 @@
     }
 
     #app {
+        color: #425486;
         font-family: 'Cabin', sans-serif;
     }
 
+    header {
+        width: 100%;
+        height: 25vh;
+        /* background: #02C39A; */
+        background: linear-gradient(135deg, hsla(210, 96%, 40%, 1) 0%, hsla(181, 73%, 67%, 1) 100%);
+    }
+
     .navigation {
-        padding: 20px;
-        background: #35495E;
+        padding: 20px 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navigation #logo img {
+        width: 175px;
+        padding: 10px;
+        background: #FFF;
+        border-radius: 20px;
     }
 
     .navigation .nav a {
+        margin: 0 20px;
         padding: 10px;
-        color: #FFF;
+        color: #132f63;
+        font-size: 30px;
+        font-weight: bold;
         transition: 0.4s;
     }
 
     .navigation .nav a:hover {
-        color: #35495E;
+        color: #132f63;
         background: #FFF;
     }
 </style>

@@ -5,30 +5,30 @@
                 <div class="img">
 
                 </div>
-                <h4>FAO : {{ this.faoCode }}</h4>
+                <h4>FAO : {{ this.faoCode }} ANC</h4>
             </div>
 
             <div class="right">
-                <h2>{{ this.scientificName }}</h2>
-                <p>Order : {{ this.order }}</p>
-                <p>Family : {{ this.family }}</p>
+                <h2>{{ this.scientificName }} Requin Marteaux</h2>
+                <p>Order : {{ this.order }} Benavita</p>
+                <p>Family : {{ this.family }} Megalo</p>
             </div>
         </section>
 
         <section class="bottom">
             <div class="item">
                 <img src="../assets/flags/french-flag.png" alt="">
-                <p>{{ this.frenchName }}</p>
+                <p>{{ this.frenchName }} Requin tortue</p>
             </div>
 
             <div class="item">
                 <img src="../assets/flags/english-flag.png" alt="">
-                <p>{{ this.englishName }}</p>
+                <p>{{ this.englishName }} Requin tortue</p>
             </div>
 
             <div class="item">
                 <img src="../assets/flags/spanish-flag.png" alt="">
-                <p>{{ this.spanishName }}</p>
+                <p>{{ this.spanishName }} Requin tortue</p>
             </div>
         </section>
     </div>
@@ -49,9 +49,14 @@
         padding: 20px;
         display: grid;
         grid-gap: 15px;
-        background: #EEF1F9;
+        background: #fcfcfd;
         border-radius: 10px;
-        box-shadow: 5px 10px 20px #D9D5EC;
+        box-shadow: inset 0 -1px 0 rgb(0 0 0 / 10%), 0 2px 5px rgb(51 51 51 / 20%);
+        cursor: pointer;
+    }
+
+    #details-card:hover {
+        box-shadow: 0 0 20px rgb(51 51 51 / 20%);
     }
 
     .top {
@@ -71,8 +76,9 @@
     .top .left .img {
         width: 125px;
         height: 80px;
-        background: #348AF4;
+        background: #DDD;
         border-radius: 10px;
+        animation: breathing 5s ease-out infinite normal;
     }
 
     .top .right h2 {
@@ -93,6 +99,13 @@
 
     .bottom .item img {
         width: 30px;
-        /* padding: 0 5px; */
+    }
+
+    @keyframes breathing {
+      0% { -webkit-transform: scale(0.9); -ms-transform: scale(0.9); transform: scale(0.9); }
+      25% { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); }
+      50% { -webkit-transform: scale(0.9); -ms-transform: scale(0.9); transform: scale(0.9); }
+      75% { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); }
+      100% { -webkit-transform: scale(0.9); -ms-transform: scale(0.9); transform: scale(0.9); }
     }
 </style>
