@@ -1,28 +1,5 @@
 # sinay-dataviz
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
 # Test technique front
 
 ## Sujet
@@ -47,3 +24,26 @@ API List Angular Material : https://material.angular.io/components/list/overview
 
 Exemple de retour du webservice :
 {"errorCode":0,"message":"Success","timestamp":1599465358910,"pageNumber":0,"totalPages":1,"data":[{"faoCode":"GKL","scientificName":"Glycymeris glycymeris","englishName":"Common European bittersweet","frenchName":"Amande commune","spanishName":"Almendra de mar","family":"Glycymerididae","order":"Bivalvia"},{"faoCode":"ANE","scientificName":"Engraulis encrasicolus","englishName":"European anchovy","frenchName":"Anchois","spanishName":"Boquerón","family":"Engraulidae","order":"Clupeiformes"}]}
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
