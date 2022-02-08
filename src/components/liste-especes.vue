@@ -7,25 +7,15 @@
 
         <section class="contentCard">
             <div class="card" v-for="item in this.data" v-bind:key="item.faoCode">
-                {{ item.faoCode }}
-
-                <!-- englishName: "European eel"
-                family: "Anguillidae"
-                faoCode: "ELE"
-                frenchName: "Anguille d'Europe"
-                order: "Anguilliformes"
-                scientificName: "Anguilla anguilla"
-                spanishName: "Anguila europea" -->
-
-                <!-- <DetailsCard
-                    :faoCode="this.data.order"
-                    :scientificName=""
-                    :family=""
-                    :order=""
-                    :englishName=""
-                    :frenchName=""
-                    :spanishName=""
-                /> -->
+                <DetailsCard
+                    :faoCode="item.faoCode"
+                    :scientificName="item.scientificName"
+                    :family="item.family"
+                    :order="item.order"
+                    :englishName="item.englishName"
+                    :frenchName="item.frenchName"
+                    :spanishName="item.spanishName"
+                />
             </div>
         </section>
     </div>

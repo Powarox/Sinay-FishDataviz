@@ -6,6 +6,7 @@
                 Logo
             </router-link> -->
             <router-link to="/">Home</router-link>
+            <router-link to="/Test">Test</router-link>
         </section>
     </nav>
 
