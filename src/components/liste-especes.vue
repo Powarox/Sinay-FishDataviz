@@ -60,6 +60,7 @@
     .filter {
         width: 80%;
         top: 17%;
+        left: 0%;
         margin: 20px 10%;
         padding: 30px 20px;
         position: absolute;

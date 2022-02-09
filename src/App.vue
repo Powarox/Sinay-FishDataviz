@@ -7,8 +7,8 @@
             </router-link>
 
             <section class="nav">
-                <router-link to="/">Home</router-link>
-                <router-link to="/Test">Test</router-link>
+                <router-link to="/">Card views</router-link>
+                <router-link to="/Test">Basic views</router-link>
                 <router-link to="/Test">Autre</router-link>
             </section>
         </nav>
@@ -57,7 +57,7 @@
 
     #app {
         color: #425486;
-        font-family: 'Cabin', sans-serif;
+        font-family: sans-serif; /*'Cabin',*/
     }
 
     header {
