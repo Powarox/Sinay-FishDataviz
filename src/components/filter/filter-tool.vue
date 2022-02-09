@@ -1,14 +1,21 @@
 <template lang="html">
     <div id="filter-tool">
         <h3>Recherche</h3>
-        <input type="text" name="" value="">
-        <button type="button" name="button">Search</button>
+        <input v-model="filter" @input="$emit('update:filter', filter)">
+        <button @click="$emit('update:selected', 'faoCode')">Fao Code</button>
+        <button @click="$emit('update:selected', 'frenchName')">French Name</button>
     </div>
 </template>
 
 <script>
     export default {
         name: 'FilterTool',
+        emits: ['update:filter', 'update:selected'],
+        data() {
+            return {
+                filter: '',
+            }
+        }
     }
 </script>
 
@@ -21,7 +28,7 @@
         padding: 20px 20px;
         position: absolute;
         display: grid;
-        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-columns: 1fr 3fr 1fr 1fr;
         grid-gap: 10px;
         align-items: center;
         justify-items: center;
