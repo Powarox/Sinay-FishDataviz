@@ -3,16 +3,22 @@
         <section class="filter">
             <h3>Recherche</h3>
             <input v-model="filter">
-            <button @click="test()">Search</button>
+            <button @click="change('faoCode')">Fao Code</button>
+            <button @click="change('frenchName')">French Name</button>
         </section>
 
         <!-- <FilterTool/> -->
 
         <section class="contentList">
-            <div class="list" v-for="item in filters" v-bind:key="item.faoCode">
-                <h3>{{ item.faoCode }}</h3>
-                <h3>{{ item.frenchName }}</h3>
-                <h3>{{ item.scientificName }}</h3>
+            <div class="row title">
+                <h3>Fao Code</h3>
+                <h3>French Name</h3>
+                <h3>Scientific Name</h3>
+            </div>
+            <div class="row element" v-for="item in filters" v-bind:key="item.faoCode">
+                <p>{{ item.faoCode }}</p>
+                <p>{{ item.frenchName }}</p>
+                <p>{{ item.scientificName }}</p>
             </div>
         </section>
     </div>
@@ -31,19 +37,27 @@
         data() {
             return {
                 filter: '',
+                selected: 'faoCode',
             }
         },
         methods: {
-            test(){
-                return this.data.filter(item => item.faoCode === this.filter)
-            }
+            change(search) {
+                this.selected = search;
+            },
         },
         computed: {
             ...mapGetters(['getData']),
 
             filters(){
-                if(this.filter !== '') {
-                    return this.data.filter(item => item.faoCode === this.filter);
+                if(this.filter !== '' && this.selected === 'faoCode') {
+                    return this.data.filter(item => {
+                        return item.faoCode.toLowerCase().includes(this.filter);
+                    });
+                }
+                else if(this.filter !== '' && this.selected === 'frenchName') {
+                    return this.data.filter(item => {
+                        return item.frenchName.toLowerCase().includes(this.filter);
+                    });
                 }
                 return this.data;
             },
@@ -54,12 +68,6 @@
 <style lang="css" scoped>
     #liste-especes {
         display: grid;
-    }
-
-    i {
-        color: #333;
-        width: 100px;
-        font-size: 30px;
     }
 
     .filter {
@@ -83,17 +91,25 @@
         grid-template-columns: 1fr;
     }
 
-    .contentList .list {
+    .contentList .row {
         padding: 20px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         align-items: center;
+    }
+
+    .contentList .title {
+        color: red;
+    }
+
+    .contentList .element {
         border-bottom: 1px solid #BBB;
+        font-size: 18px;
         transition: 0.4s;
         cursor: pointer;
     }
 
-    .contentList .list:hover {
+    .contentList .element:hover {
         background: #AAA;
         border-radius: 10px;
     }
