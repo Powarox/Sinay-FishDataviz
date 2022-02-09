@@ -5,30 +5,30 @@
                 <div class="img">
 
                 </div>
-                <h4>FAO : {{ this.faoCode }} ANC</h4>
+                <h4>FAO : {{ this.faoCode }}</h4>
             </div>
 
             <div class="right">
-                <h2>{{ this.scientificName }} Requin Marteaux</h2>
-                <p>Order : {{ this.order }} Benavita</p>
-                <p>Family : {{ this.family }} Megalo</p>
+                <h2>{{ this.scientificName }}</h2>
+                <p>Order : {{ this.order }}</p>
+                <p>Family : {{ this.family }}</p>
             </div>
         </section>
 
         <section class="bottom">
             <div class="item">
                 <img src="../../assets/flags/french-flag.png" alt="">
-                <p>{{ this.frenchName }} Requin tortue</p>
+                <p>{{ this.frenchName }}</p>
             </div>
 
             <div class="item">
                 <img src="../../assets/flags/english-flag.png" alt="">
-                <p>{{ this.englishName }} Requin tortue</p>
+                <p>{{ this.englishName }}</p>
             </div>
 
             <div class="item">
                 <img src="../../assets/flags/spanish-flag.png" alt="">
-                <p>{{ this.spanishName }} Requin tortue</p>
+                <p>{{ this.spanishName }}</p>
             </div>
         </section>
     </div>

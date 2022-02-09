@@ -2,16 +2,14 @@
     <div id="liste-especes">
         <section class="filter">
             <h3>Recherche</h3>
-            <input type="text" name="" value="">
-            <button type="button" name="button">Search</button>
-            <button type="button" name="button">Search</button>
-            <button type="button" name="button">Search</button>
+            <input v-model="filter">
+            <button @click="test()">Search</button>
         </section>
 
         <!-- <FilterTool/> -->
 
         <section class="contentList">
-            <div class="list" v-for="item in this.data" v-bind:key="item.faoCode">
+            <div class="list" v-for="item in filters" v-bind:key="item.faoCode">
                 <h3>{{ item.faoCode }}</h3>
                 <h3>{{ item.frenchName }}</h3>
                 <h3>{{ item.scientificName }}</h3>
@@ -22,6 +20,7 @@
 
 <script>
     // import FilterTool from '../filter/filter-tool.vue';
+    import { mapGetters } from 'vuex';
 
     export default {
         name: 'ListEspeces',
@@ -29,8 +28,25 @@
         components: {
             // FilterTool,
         },
+        data() {
+            return {
+                filter: '',
+            }
+        },
         methods: {
+            test(){
+                return this.data.filter(item => item.faoCode === this.filter)
+            }
+        },
+        computed: {
+            ...mapGetters(['getData']),
 
+            filters(){
+                if(this.filter !== '') {
+                    return this.data.filter(item => item.faoCode === this.filter);
+                }
+                return this.data;
+            },
         }
     }
 </script>
