@@ -22,9 +22,7 @@
 
         },
         computed: {
-            ...mapGetters([
-                'getLoadData', 'getLoadPrice', 'getData'
-            ]),
+            ...mapGetters(['getData']),
             data() {
                 return this.getData;
             },

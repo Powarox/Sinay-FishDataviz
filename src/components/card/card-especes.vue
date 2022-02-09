@@ -3,8 +3,8 @@
         <FilterTool  v-model:filter="filter" v-model:selected="selected"/>
 
         <section class="contentCard">
-            <div class="card" v-for="item in filters" v-bind:key="item.faoCode">
-                <router-link :to="{name: 'DetailsView', params: { code: item.faoCode },}">
+            <div class="card" v-for="(item, id) in filters" v-bind:key="item.faoCode">
+                <router-link :to="{name: 'DetailsView', params: { code: item.faoCode, id: id }}">
                     <DetailsCard
                         :faoCode="item.faoCode"
                         :scientificName="item.scientificName"
@@ -21,7 +21,6 @@
 </template>
 
 <script>
-    import { mapGetters } from 'vuex';
     import DetailsCard from './details-card.vue';
     import FilterTool from '../filter/filter-tool.vue';
 
@@ -41,8 +40,6 @@
 
         },
         computed: {
-            ...mapGetters(['getData']),
-
             filters(){
                 if(this.filter !== '' && this.selected === 'faoCode') {
                     return this.data.filter(item => {

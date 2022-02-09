@@ -8,8 +8,8 @@
                 <h3>French Name</h3>
                 <h3>Scientific Name</h3>
             </div>
-            <div v-for="item in filters" v-bind:key="item.faoCode">
-                <router-link class="row element" :to="{name: 'DetailsView', params: { code: item.faoCode },}">
+            <div v-for="(item, id) in filters" v-bind:key="item.faoCode">
+                <router-link class="row element" :to="{name: 'DetailsView', params: { code: item.faoCode, id: id }}">
                     <p>{{ item.faoCode }}</p>
                     <p>{{ item.frenchName }}</p>
                     <p>{{ item.scientificName }}</p>
