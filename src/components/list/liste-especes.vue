@@ -1,14 +1,14 @@
 <template lang="html">
     <div id="liste-especes">
-        <!-- <section class="filter">
+        <section class="filter">
             <h3>Recherche</h3>
             <input type="text" name="" value="">
             <button type="button" name="button">Search</button>
             <button type="button" name="button">Search</button>
             <button type="button" name="button">Search</button>
-        </section> -->
+        </section>
 
-        <FilterTool/>
+        <!-- <FilterTool/> -->
 
         <section class="contentList">
             <div class="list" v-for="item in this.data" v-bind:key="item.faoCode">
@@ -21,13 +21,13 @@
 </template>
 
 <script>
-    import FilterTool from '../filter/filter-tool.vue';
+    // import FilterTool from '../filter/filter-tool.vue';
 
     export default {
         name: 'ListEspeces',
         props: ['data'],
         components: {
-            FilterTool,
+            // FilterTool,
         },
         methods: {
 
@@ -46,7 +46,7 @@
         font-size: 30px;
     }
 
-    /* .filter {
+    .filter {
         width: 80%;
         top: 17%;
         left: 0%;
@@ -59,7 +59,7 @@
         background: #FFF;
         border-radius: 10px;
         box-shadow: inset 0 -1px 0 0 rgb(0 0 0 / 10%), 0 2px 5px 0 rgb(51 51 51 / 20%);
-    } */
+    }
 
     .contentList {
         margin: 50px 10%;

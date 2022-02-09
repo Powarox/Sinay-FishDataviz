@@ -29,7 +29,7 @@
 
         },
         created() {
-            // this.fetchDataFromSinayApi();
+            this.fetchDataFromSinayApi();
         },
         methods: {
             ...mapActions([
