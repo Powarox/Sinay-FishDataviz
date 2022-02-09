@@ -8,10 +8,12 @@
                 <h3>French Name</h3>
                 <h3>Scientific Name</h3>
             </div>
-            <div class="row element" v-for="item in filters" v-bind:key="item.faoCode">
-                <p>{{ item.faoCode }}</p>
-                <p>{{ item.frenchName }}</p>
-                <p>{{ item.scientificName }}</p>
+            <div v-for="item in filters" v-bind:key="item.faoCode">
+                <router-link class="row element" :to="{name: 'DetailsView', params: { code: item.faoCode },}">
+                    <p>{{ item.faoCode }}</p>
+                    <p>{{ item.frenchName }}</p>
+                    <p>{{ item.scientificName }}</p>
+                </router-link>
             </div>
         </section>
     </div>
@@ -80,6 +82,7 @@
     }
 
     .contentList .element {
+        color: #425486;
         border-bottom: 1px solid #BBB;
         font-size: 18px;
         transition: 0.4s;

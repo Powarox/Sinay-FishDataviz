@@ -4,15 +4,17 @@
 
         <section class="contentCard">
             <div class="card" v-for="item in filters" v-bind:key="item.faoCode">
-                <DetailsCard
-                    :faoCode="item.faoCode"
-                    :scientificName="item.scientificName"
-                    :family="item.family"
-                    :order="item.order"
-                    :englishName="item.englishName"
-                    :frenchName="item.frenchName"
-                    :spanishName="item.spanishName"
-                />
+                <router-link :to="{name: 'DetailsView', params: { code: item.faoCode },}">
+                    <DetailsCard
+                        :faoCode="item.faoCode"
+                        :scientificName="item.scientificName"
+                        :family="item.family"
+                        :order="item.order"
+                        :englishName="item.englishName"
+                        :frenchName="item.frenchName"
+                        :spanishName="item.spanishName"
+                    />
+                </router-link>
             </div>
         </section>
     </div>
@@ -68,6 +70,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 40px;
+    }
+
+    .contentCard .card a {
+        color: #425486;
     }
 
     @media (max-width: 1450px){

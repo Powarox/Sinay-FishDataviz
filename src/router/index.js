@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 import CardOverview from '../views/CardOverview.vue';
+import DetailsView from '../views/DetailsView.vue';
 // import NotFound from '../views/NotFound.vue';
 
 const routes = [
@@ -16,6 +17,16 @@ const routes = [
         path: '/CardOverview',
         name: 'CardOverview',
         component: CardOverview,
+        meta: {
+            title: 'Sinay - Dataviz',
+        }
+    },
+    {
+        path: '/DetailsView/:code',
+        name: 'DetailsView',
+        props: true,
+        component: DetailsView,
+        // component: () = > import('../views/DetailsView.vue'),
         meta: {
             title: 'Sinay - Dataviz',
         }
