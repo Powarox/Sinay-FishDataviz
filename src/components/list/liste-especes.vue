@@ -8,23 +8,9 @@
             <button type="button" name="button">Search</button>
         </section>
 
+        <!-- <FilterTool/> -->
+
         <section class="contentList">
-            <!-- <i class="fa-solid fa-fish"></i>
-            <i class="fa-solid fa-fish-bones"></i>
-            <i class="fa-solid fa-fish-cooked"></i>
-
-            <i class="fa-solid fa-crab"></i>
-            <i class="fa-solid fa-lobster"></i>
-            <i class="fa-solid fa-shrimp"></i>
-
-            <i class="fa-solid fa-dolphin"></i> -->
-            <i class="fa-solid fa-code"></i>
-
-
-            <!-- <font-awesome-icon icon="fa-solid fa-fish" />
-            <font-awesome-icon icon="fa-solid fa-fish-bones" />
-            <font-awesome-icon icon="fa-solid fa-fish-cooked" /> -->
-
             <div class="list" v-for="item in this.data" v-bind:key="item.faoCode">
                 <h3>{{ item.faoCode }}</h3>
                 <h3>{{ item.frenchName }}</h3>
@@ -35,11 +21,13 @@
 </template>
 
 <script>
+    // import FilterTool from '../filter/filter-tool.vue';
+
     export default {
-        name: 'liste-especes',
+        name: 'ListEspeces',
         props: ['data'],
         components: {
-
+            // FilterTool,
         },
         methods: {
 
@@ -74,16 +62,24 @@
     }
 
     .contentList {
-        margin-top: 50px;
+        margin: 50px 10%;
         display: grid;
         grid-template-columns: 1fr;
     }
 
     .contentList .list {
         padding: 20px;
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         align-items: center;
+        border-bottom: 1px solid #BBB;
+        transition: 0.4s;
+        cursor: pointer;
+    }
+
+    .contentList .list:hover {
+        background: #AAA;
+        border-radius: 10px;
     }
 
 </style>

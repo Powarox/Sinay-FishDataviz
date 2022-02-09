@@ -28,7 +28,7 @@
     import DetailsCard from './details-card.vue';
 
     export default {
-        name: 'card-especes',
+        name: 'CardEspeces',
         props: ['data'],
         components: {
             DetailsCard,
