@@ -1,15 +1,9 @@
 <template lang="html">
     <div id="card-especes">
-        <section class="filter">
-            <h3>Recherche</h3>
-            <input type="text" name="" value="">
-            <button type="button" name="button">Search</button>
-            <button type="button" name="button">Search</button>
-            <button type="button" name="button">Search</button>
-        </section>
+        <FilterTool  v-model:filter="filter" v-model:selected="selected"/>
 
         <section class="contentCard">
-            <div class="card" v-for="item in this.data" v-bind:key="item.faoCode">
+            <div class="card" v-for="item in filters" v-bind:key="item.faoCode">
                 <DetailsCard
                     :faoCode="item.faoCode"
                     :scientificName="item.scientificName"
@@ -25,19 +19,41 @@
 </template>
 
 <script>
+    import { mapGetters } from 'vuex';
     import DetailsCard from './details-card.vue';
+    import FilterTool from '../filter/filter-tool.vue';
 
     export default {
         name: 'CardEspeces',
         props: ['data'],
         components: {
-            DetailsCard,
+            DetailsCard, FilterTool,
+        },
+        data() {
+            return {
+                filter: '',
+                selected: 'faoCode',
+            }
         },
         methods: {
-            printData() {
-                console.log(this.data);
-                console.log(this.data[0].order);
-            }
+
+        },
+        computed: {
+            ...mapGetters(['getData']),
+
+            filters(){
+                if(this.filter !== '' && this.selected === 'faoCode') {
+                    return this.data.filter(item => {
+                        return item.faoCode.toLowerCase().includes(this.filter.toLowerCase());
+                    });
+                }
+                else if(this.filter !== '' && this.selected === 'frenchName') {
+                    return this.data.filter(item => {
+                        return item.frenchName.toLowerCase().includes(this.filter.toLowerCase());
+                    });
+                }
+                return this.data;
+            },
         }
     }
 </script>

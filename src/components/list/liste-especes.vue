@@ -18,8 +18,8 @@
 </template>
 
 <script>
-    import FilterTool from '../filter/filter-tool.vue';
     import { mapGetters } from 'vuex';
+    import FilterTool from '../filter/filter-tool.vue';
 
     export default {
         name: 'ListEspeces',
@@ -40,16 +40,14 @@
             ...mapGetters(['getData']),
 
             filters(){
-                console.log(this.selected);
-                console.log(this.filter);
                 if(this.filter !== '' && this.selected === 'faoCode') {
                     return this.data.filter(item => {
-                        return item.faoCode.toLowerCase().includes(this.filter);
+                        return item.faoCode.toLowerCase().includes(this.filter.toLowerCase());
                     });
                 }
                 else if(this.filter !== '' && this.selected === 'frenchName') {
                     return this.data.filter(item => {
-                        return item.frenchName.toLowerCase().includes(this.filter);
+                        return item.frenchName.toLowerCase().includes(this.filter.toLowerCase());
                     });
                 }
                 return this.data;

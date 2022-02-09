@@ -2,8 +2,8 @@
     <div id="filter-tool">
         <h3>Recherche</h3>
         <input v-model="filter" @input="$emit('update:filter', filter)">
-        <button @click="$emit('update:selected', 'faoCode')">Fao Code</button>
-        <button @click="$emit('update:selected', 'frenchName')">French Name</button>
+        <button :class="{active: focus_fao}" @click="$emit('update:selected', 'faoCode'); switchBtn('fao');">Fao Code</button>
+        <button :class="{active: focus_fra}" @click="$emit('update:selected', 'frenchName'); switchBtn('fra');">French Name</button>
     </div>
 </template>
 
@@ -14,6 +14,20 @@
         data() {
             return {
                 filter: '',
+                focus_fao: false,
+                focus_fra: true,
+            }
+        },
+        methods: {
+            switchBtn(elem) {
+                if(elem === 'fao'){
+                    this.focus_fao = false;
+                    this.focus_fra = true;
+                }
+                else {
+                    this.focus_fao = true;
+                    this.focus_fra = false;
+                }
             }
         }
     }
@@ -63,14 +77,16 @@
         background: #41B883;
         border: 2px solid #41B883;
         border-radius: 10px;
+        box-shadow: inset 0 -1px 0 0 rgb(0 0 0 / 10%), 0 2px 5px 0 rgb(51 51 51 / 20%);
         font-size: 17px;
         font-weight: bold;
         transition: 0.4s;
         cursor: pointer;
     }
 
-    button:hover {
+    .active {
         color: #41B883;
         background: #FFF;
+        border: 2px solid #FFF;
     }
 </style>
