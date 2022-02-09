@@ -1,5 +1,5 @@
 <template lang="html">
-    <div id="liste-especes">
+    <div id="card-especes">
         <section class="filter">
             <h3>Recherche</h3>
             <input type="text" name="" value="">
@@ -20,16 +20,6 @@
                     :spanishName="item.spanishName"
                 />
             </div>
-
-            <DetailsCard/>
-            <DetailsCard/>
-            <DetailsCard/>
-            <DetailsCard/>
-            <DetailsCard/>
-            <DetailsCard/>
-            <DetailsCard/>
-            <DetailsCard/>
-            <DetailsCard/>
         </section>
     </div>
 </template>
@@ -38,7 +28,7 @@
     import DetailsCard from './details-card.vue';
 
     export default {
-        name: 'liste-especes',
+        name: 'card-especes',
         props: ['data'],
         components: {
             DetailsCard,
@@ -53,7 +43,7 @@
 </script>
 
 <style lang="css" scoped>
-    #liste-especes {
+    #card-especes {
         display: grid;
     }
 

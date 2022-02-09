@@ -6,7 +6,7 @@
 
 <script>
     import { mapGetters } from 'vuex';
-    import ListEspeces from '../components/liste-especes.vue';
+    import ListEspeces from '../components/list/liste-especes.vue';
 
     export default {
         name: 'Home',

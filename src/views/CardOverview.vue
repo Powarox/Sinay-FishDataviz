@@ -1,17 +1,17 @@
 <template lang="html">
-    <div id="test">
-        <ListTest :data="this.data"/>
+    <div id="cardOverview">
+        <CardEspeces :data="this.data"/>
     </div>
 </template>
 
 <script>
     import { mapGetters } from 'vuex';
-    import ListTest from '../components/list-test.vue';
+    import CardEspeces from '../components/card/card-especes.vue';
 
     export default {
-        name: 'Test',
+        name: 'CardOverview',
         components: {
-            ListTest,
+            CardEspeces,
         },
         data() {
             return {
@@ -33,7 +33,7 @@
 </script>
 
 <style lang="css" scoped>
-    #test {
+    #cardOverview {
         padding: 30px;
         background: #F1F2F6;
     }

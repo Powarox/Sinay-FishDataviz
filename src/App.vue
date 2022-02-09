@@ -7,9 +7,9 @@
             </router-link>
 
             <section class="nav">
-                <router-link to="/">Card views</router-link>
-                <router-link to="/Test">Basic views</router-link>
-                <router-link to="/Test">Autre</router-link>
+                <router-link to="/">Home</router-link>
+                <router-link to="/CardOverview">Card Overviews</router-link>
+                <router-link to="/CardOverview">List Overviews</router-link>
             </section>
         </nav>
         <!-- <img src="./assets/header/banner.svg" id="banner" alt="une bannière"> -->
@@ -29,7 +29,7 @@
 
         },
         created() {
-            // this.fetchDataFromSinayApi();
+            this.fetchDataFromSinayApi();
         },
         methods: {
             ...mapActions([

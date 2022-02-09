@@ -1,5 +1,5 @@
 <template lang="html">
-    <div id="liste-test">
+    <div id="liste-especes">
         <section class="filter">
             <h3>Recherche</h3>
             <input type="text" name="" value="">
@@ -36,7 +36,7 @@
 
 <script>
     export default {
-        name: 'liste-test',
+        name: 'liste-especes',
         props: ['data'],
         components: {
 
@@ -48,7 +48,7 @@
 </script>
 
 <style lang="css" scoped>
-    #liste-test {
+    #liste-especes {
         display: grid;
     }
 

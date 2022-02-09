@@ -17,17 +17,17 @@
 
         <section class="bottom">
             <div class="item">
-                <img src="../assets/flags/french-flag.png" alt="">
+                <img src="../../assets/flags/french-flag.png" alt="">
                 <p>{{ this.frenchName }} Requin tortue</p>
             </div>
 
             <div class="item">
-                <img src="../assets/flags/english-flag.png" alt="">
+                <img src="../../assets/flags/english-flag.png" alt="">
                 <p>{{ this.englishName }} Requin tortue</p>
             </div>
 
             <div class="item">
-                <img src="../assets/flags/spanish-flag.png" alt="">
+                <img src="../../assets/flags/spanish-flag.png" alt="">
                 <p>{{ this.spanishName }} Requin tortue</p>
             </div>
         </section>
