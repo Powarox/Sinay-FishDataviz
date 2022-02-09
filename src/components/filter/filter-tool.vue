@@ -2,8 +2,8 @@
     <div id="filter-tool">
         <h3>Recherche</h3>
         <input v-model="filter" @input="$emit('update:filter', filter)">
-        <button :class="{active: focus_fao}" @click="$emit('update:selected', 'faoCode'); switchBtn('fao');">Fao Code</button>
-        <button :class="{active: focus_fra}" @click="$emit('update:selected', 'frenchName'); switchBtn('fra');">French Name</button>
+        <button :class="{active: focus_fao}" @click="$emit('update:selected', 'faoCode'); switchBtn('fao');">Fao <br> Code</button>
+        <button :class="{active: focus_fra}" @click="$emit('update:selected', 'frenchName'); switchBtn('fra');">French <br> Name</button>
     </div>
 </template>
 
@@ -72,6 +72,7 @@
     }
 
     button {
+        width: 140px;
         padding: 5px 20px;
         color: #FFF;
         background: #41B883;
@@ -88,5 +89,52 @@
         color: #41B883;
         background: #FFF;
         border: 2px solid #FFF;
+    }
+
+    @media (max-width: 1000px){
+        button {
+            width: 120px;
+        }
+    }
+
+    @media (max-width: 800px){
+        button {
+            width: 100px;
+        }
+    }
+
+    @media (max-width: 700px){
+        #filter-tool {
+            width: 80%;
+            margin: 20px 10%;
+        }
+    }
+
+    @media (max-width: 650px){
+        #filter-tool {
+            width: 96%;
+            margin: 20px 2%;
+        }
+    }
+
+    @media (max-width: 500px){
+        #filter-tool {
+            width: 100%;
+            margin: 20px 0;
+            grid-template-columns: 1fr 3fr 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 450px){
+        #filter-tool {
+            grid-template-columns: 3fr 1fr 1fr;
+        }
+        button {
+            width: 90px;
+            font-size: 15px;
+        }
+        h3 {
+            display: none;
+        }
     }
 </style>

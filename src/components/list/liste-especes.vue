@@ -91,4 +91,15 @@
         border-radius: 10px;
     }
 
+    @media (max-width: 1100px){
+        .contentList {
+            margin: 50px 5%;
+        }
+    }
+
+    @media (max-width: 900px){
+        .contentList {
+            margin: 50px 0;
+        }
+    }
 </style>

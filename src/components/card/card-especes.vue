@@ -63,26 +63,34 @@
         display: grid;
     }
 
-    .filter {
-        width: 80%;
-        top: 17%;
-        left: 0%;
-        margin: 20px 10%;
-        padding: 30px 20px;
-        position: absolute;
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
-        grid-gap: 10px;
-        /* justify-items: center; */
-        background: #FFF;
-        border-radius: 10px;
-        box-shadow: inset 0 -1px 0 0 rgb(0 0 0 / 10%), 0 2px 5px 0 rgb(51 51 51 / 20%);
-    }
-
     .contentCard {
         margin-top: 50px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 40px;
+    }
+
+    @media (max-width: 1450px){
+        .contentCard {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 1000px){
+        .contentCard {
+            grid-gap: 20px;
+        }
+    }
+
+    @media (max-width: 950px){
+        .contentCard {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 450px){
+        .contentCard {
+            grid-template-columns: 1fr;
+        }
     }
 </style>

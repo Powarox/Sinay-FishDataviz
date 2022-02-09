@@ -37,4 +37,10 @@
         padding: 30px;
         background: #F1F2F6;
     }
+
+    @media (max-width: 500px){
+        #cardOverview {
+            padding: 5px;
+        }
+    }
 </style>

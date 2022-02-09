@@ -108,4 +108,24 @@
       75% { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); }
       100% { -webkit-transform: scale(0.9); -ms-transform: scale(0.9); transform: scale(0.9); }
     }
+
+    @media (max-width: 500px){
+        .bottom {
+            flex-wrap: wrap;
+        }
+    }
+
+    @media (max-width: 435px){
+        .top .left .img {
+            width: 100px;
+            height: 60px;
+        }
+    }
+
+    @media (max-width: 335px){
+        .top .right {
+            display: grid;
+            wrap: wrap;
+        }
+    }
 </style>
