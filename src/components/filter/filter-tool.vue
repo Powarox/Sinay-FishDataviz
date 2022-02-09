@@ -3,8 +3,6 @@
         <h3>Recherche</h3>
         <input type="text" name="" value="">
         <button type="button" name="button">Search</button>
-        <button type="button" name="button">Search</button>
-        <button type="button" name="button">Search</button>
     </div>
 </template>
 
@@ -16,17 +14,56 @@
 
 <style lang="css" scoped>
     #filter-tool {
-        width: 80%;
+        width: 70%;
         top: 17%;
         left: 0%;
-        margin: 20px 10%;
-        padding: 30px 20px;
+        margin: 20px 15%;
+        padding: 20px 20px;
         position: absolute;
         display: grid;
-        grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 3fr 1fr;
         grid-gap: 10px;
+        align-items: center;
+        justify-items: center;
         background: #FFF;
         border-radius: 10px;
         box-shadow: inset 0 -1px 0 0 rgb(0 0 0 / 10%), 0 2px 5px 0 rgb(51 51 51 / 20%);
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    input {
+        width: 100%;
+        padding: 5px 10px;
+        color: #333;
+        background: #F1F2F6;
+        border: 2px solid #F1F2F6;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        transition: 0.4s;
+    }
+
+    input:focus {
+        border: 2px solid #41B883;
+    }
+
+    button {
+        padding: 5px 20px;
+        color: #FFF;
+        background: #41B883;
+        border: 2px solid #41B883;
+        border-radius: 10px;
+        font-size: 17px;
+        font-weight: bold;
+        transition: 0.4s;
+        cursor: pointer;
+    }
+
+    button:hover {
+        color: #41B883;
+        background: #FFF;
     }
 </style>

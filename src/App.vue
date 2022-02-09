@@ -29,7 +29,7 @@
 
         },
         created() {
-            this.fetchDataFromSinayApi();
+            // this.fetchDataFromSinayApi();
         },
         methods: {
             ...mapActions([
@@ -57,7 +57,7 @@
 
     #app {
         color: #425486;
-        font-family: sans-serif; /*'Cabin',*/
+        font-family: 'Cabin', sans-serif;
     }
 
     header {
