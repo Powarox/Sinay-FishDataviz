@@ -70,7 +70,7 @@
     }
 
     .contentCard .card a {
-        color: #425486;
+        color: var(--main-font-color);
     }
 
     @media (max-width: 1450px){

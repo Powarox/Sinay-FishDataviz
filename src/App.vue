@@ -66,20 +66,29 @@
     }
 /* --- Colors --- */
     :root {
-        --main-first-color: #41B883;
-        --main-second-color: #35495E;
+        --main-font-color: #425486;
+        --main-button-color: #41B883;
+
+        --main-white-color: #FFFFFF;
+        --body-grey-color: #F1F2F6;
+        --light-grey-color: #DDDDDD;
+        --dark-grey-color: #333333;
+
+
+        --header-font-color: #132f63;
+        --header-first-color: hsla(210, 96%, 40%, 1);
+        --header-second-color: hsla(181, 73%, 67%, 1);
     }
 
     #app {
-        color: #425486;
+        color: var(--main-font-color);
         font-family: 'Cabin', sans-serif;
     }
 
     header {
         width: 100%;
         height: 25vh;
-        /* background: #02C39A; */
-        background: linear-gradient(135deg, hsla(210, 96%, 40%, 1) 0%, hsla(181, 73%, 67%, 1) 100%);
+        background: linear-gradient(135deg, var(--header-first-color) 0%, var(--header-second-color) 100%);
     }
 
     .navigation {
@@ -92,14 +101,14 @@
     .navigation #logo img {
         width: 175px;
         padding: 10px;
-        background: #FFF;
+        background: var(--main-white-color);
         border-radius: 20px;
     }
 
     .navigation .nav a {
         margin: 0 20px;
         padding: 10px;
-        color: #132f63;
+        color: var(--header-font-color);
         border-bottom: 3px solid transparent;
         font-size: 25px;
         font-weight: bold;
@@ -107,7 +116,7 @@
     }
 
     .navigation .nav .activePage {
-        border-bottom: 3px solid #FFF;
+        border-bottom: 3px solid var(--main-white-color);
     }
 
     @media (max-width: 950px){

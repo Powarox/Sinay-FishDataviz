@@ -33,7 +33,7 @@
 <style lang="css" scoped>
     #home {
         padding: 30px;
-        background: #F1F2F6;
+        background: var(--body-grey-color);
     }
 
     @media (max-width: 600px){

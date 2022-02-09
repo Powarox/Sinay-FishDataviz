@@ -46,7 +46,7 @@
         grid-gap: 10px;
         align-items: center;
         justify-items: center;
-        background: #FFF;
+        background: var(--main-white-color);
         border-radius: 10px;
         box-shadow: inset 0 -1px 0 0 rgb(0 0 0 / 10%), 0 2px 5px 0 rgb(51 51 51 / 20%);
     }
@@ -58,9 +58,9 @@
     input {
         width: 100%;
         padding: 5px 10px;
-        color: #333;
-        background: #F1F2F6;
-        border: 2px solid #F1F2F6;
+        color: var(--dark-grey-color);
+        background: var(--body-grey-color);
+        border: 2px solid var(--body-grey-color);
         border-radius: 10px;
         font-size: 20px;
         font-weight: bold;
@@ -68,15 +68,15 @@
     }
 
     input:focus {
-        border: 2px solid #41B883;
+        border: 2px solid var(--main-button-color);
     }
 
     button {
         width: 140px;
         padding: 5px 20px;
-        color: #FFF;
-        background: #41B883;
-        border: 2px solid #41B883;
+        color: var(--main-white-color);
+        background: var(--main-button-color);
+        border: 2px solid var(--main-button-color);
         border-radius: 10px;
         box-shadow: inset 0 -1px 0 0 rgb(0 0 0 / 10%), 0 2px 5px 0 rgb(51 51 51 / 20%);
         font-size: 17px;
@@ -86,9 +86,9 @@
     }
 
     .active {
-        color: #41B883;
-        background: #FFF;
-        border: 2px solid #FFF;
+        color: var(--main-button-color);
+        background: var(--main-white-color);
+        border: 2px solid var(--main-white-color);
     }
 
     @media (max-width: 1000px){

@@ -35,7 +35,7 @@
 <style lang="css" scoped>
     #cardOverview {
         padding: 30px;
-        background: #F1F2F6;
+        background: var(--body-grey-color);
     }
 
     @media (max-width: 500px){

@@ -78,19 +78,19 @@
 
     .contentList .title {
         font-size: 22px;
-        border-bottom: 1px solid #BBB;
+        border-bottom: 2px solid var(--light-grey-color);
     }
 
     .contentList .element {
-        color: #425486;
-        border-bottom: 1px solid #BBB;
+        color: var(--main-font-color);
+        border-bottom: 2px solid var(--light-grey-color);
         font-size: 18px;
         transition: 0.4s;
         cursor: pointer;
     }
 
     .contentList .element:hover {
-        background: #AAA;
+        background: var(--light-grey-color);
         border-radius: 10px;
     }
 

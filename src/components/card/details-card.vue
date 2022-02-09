@@ -49,7 +49,7 @@
         padding: 20px;
         display: grid;
         grid-gap: 15px;
-        background: #fcfcfd;
+        background: var(--main-white-color);
         border-radius: 10px;
         box-shadow: inset 0 -1px 0 rgb(0 0 0 / 10%), 0 2px 5px rgb(51 51 51 / 20%);
         cursor: pointer;
@@ -76,7 +76,7 @@
     .top .left .img {
         width: 125px;
         height: 80px;
-        background: #DDD;
+        background: var(--light-grey-color);
         border-radius: 10px;
         animation: breathing 5s ease-out infinite normal;
     }
