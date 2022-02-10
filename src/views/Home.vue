@@ -1,7 +1,7 @@
 <template lang="html">
     <div id="home">
-        <ListEspeces :data="this.data"/>
         <AddItems/>
+        <ListEspeces :data="this.data"/>
     </div>
 </template>
 

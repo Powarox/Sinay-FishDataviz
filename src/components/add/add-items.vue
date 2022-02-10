@@ -21,6 +21,7 @@
                 <label for="scientificName">Scientific name: </label>
                 <input id="scientificName" type="text" v-model="data['scientificName']">
             </div>
+            
             <button @click="submitForm()">Add</button>
         </div>
     </div>

@@ -2,9 +2,7 @@
     <div id="details-card">
         <section class="top">
             <div class="left">
-                <div class="img">
-
-                </div>
+                <img :src="getImgUrl()" alt="">
                 <h4>FAO : {{ this.faoCode }}</h4>
             </div>
 
@@ -38,9 +36,16 @@
     export default {
         name: 'DetailsCard',
         props: [
-            'faoCode', 'scientificName', 'family', 'order',
-            'englishName', 'frenchName', 'spanishName',
+            'id', 'faoCode', 'scientificName', 'family',
+            'order', 'englishName', 'frenchName', 'spanishName',
         ],
+        methods: {
+            getImgUrl() {
+                let num = this.id % 9
+                console.log(num);
+                return require('../../assets/fish/img'+num+'.jpg');
+            },
+        },
     }
 </script>
 
@@ -73,7 +78,7 @@
     .top .left h4 {
     }
 
-    .top .left .img {
+    .top .left img {
         width: 125px;
         height: 80px;
         background: var(--light-grey-color);
@@ -101,13 +106,13 @@
         width: 30px;
     }
 
-    @keyframes breathing {
+    /* @keyframes breathing {
       0% { -webkit-transform: scale(0.9); -ms-transform: scale(0.9); transform: scale(0.9); }
       25% { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); }
       50% { -webkit-transform: scale(0.9); -ms-transform: scale(0.9); transform: scale(0.9); }
       75% { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); }
       100% { -webkit-transform: scale(0.9); -ms-transform: scale(0.9); transform: scale(0.9); }
-    }
+    } */
 
     @media (max-width: 500px){
         .bottom {

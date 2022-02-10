@@ -6,6 +6,7 @@
             <div class="card" v-for="(item, id) in filters" v-bind:key="item.faoCode">
                 <router-link :to="{name: 'DetailsView', params: { code: item.faoCode, id: id }}">
                     <DetailsCard
+                        :id='id'
                         :faoCode="item.faoCode"
                         :scientificName="item.scientificName"
                         :family="item.family"
