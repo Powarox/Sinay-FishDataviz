@@ -6,7 +6,7 @@
 
 - /components
 	--> Contient les différents composants
-    
+
 	- /add
 		--> Composant pop up permettant d'ajouter de nouvelles données en local (pas de sauvegarde disparation après reload page)
 
@@ -27,8 +27,8 @@
 
 - /store
 	--> Fichier permettant d'éxécuter des tâches en arrière plan / stockage de données avec accès partagé
-	--> Connexion à l'API
-	--> Récupération et stockage des données
+	- Connexion à l'API
+	- Récupération et stockage des données
 
 - /views
 	--> Différentes pages de l'application
