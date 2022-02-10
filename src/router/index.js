@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 import CardOverview from '../views/CardOverview.vue';
 import DetailsView from '../views/DetailsView.vue';
-// import NotFound from '../views/NotFound.vue';
+import NotFound from '../views/NotFound.vue';
 
 const routes = [
     {
@@ -26,19 +26,18 @@ const routes = [
         name: 'DetailsView',
         props: true,
         component: DetailsView,
-        // component: () = > import('../views/DetailsView.vue'),
         meta: {
             title: 'Sinay - Dataviz',
         }
     },
-    // {
-    //     name: 'NotFound',
-    //     path: '/:pathMatch(.*)',
-    //     component: NotFound,
-    //     meta: {
-    //         title: '404 Not Found',
-    //     }
-    // }
+    {
+        name: 'NotFound',
+        path: '/:pathMatch(.*)',
+        component: NotFound,
+        meta: {
+            title: '404 Not Found',
+        }
+    }
 ]
 
 const router = createRouter({
@@ -46,8 +45,7 @@ const router = createRouter({
     routes
 });
 
-router.afterEach((to) => {  // (to, from)
-    // console.log(from, to);
+router.afterEach((to) => {
     document.title = to.meta.title;
 })
 
