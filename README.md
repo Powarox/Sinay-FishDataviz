@@ -1,5 +1,41 @@
 # Sinay - Dataviz
 
+## Architecture
+- /assets
+	--> Contient toutes les ressources annexes (images)
+
+- /components
+	--> Contient les différents composants
+    
+	- /add
+		--> Composant pop up permettant d'ajouter de nouvelles données en local (pas de sauvegarde disparation après reload page)
+
+	- /card
+		--> Affichage des données sous forme de cards
+
+	- /filter
+		--> Composant permettant de filter les données avec le faoCode ou frenchName
+
+	- /list
+		--> Affichage standard des données
+
+- /local
+	--> Contient un fichier json avec toute les données de l'API (server enteint après 21H)
+
+- /router
+	--> Fichier permettant de naviguer entre les différentes routes
+
+- /store
+	--> Fichier permettant d'éxécuter des tâches en arrière plan / stockage de données avec accès partagé
+	--> Connexion à l'API
+	--> Récupération et stockage des données
+
+- /views
+	--> Différentes pages de l'application
+
+- App.vue --> Point d'entrée de l'application
+- main.js --> Configuration de l'application
+
 ## Sujet
 Créer une liste Material Design Angular contenant le nom et le code FAO des espèces.
 
