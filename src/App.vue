@@ -73,6 +73,7 @@
         --body-grey-color: #F1F2F6;
         --light-grey-color: #DDDDDD;
         --dark-grey-color: #333333;
+        --main-red-color: #fb565e;
 
 
         --header-font-color: #132f63;
