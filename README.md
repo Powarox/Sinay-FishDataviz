@@ -20,14 +20,14 @@
 		--> Affichage standard des données
 
 - /local
-	--> Contient un fichier json avec toute les données de l'API (server enteint après 21H)
+	--> Contient un fichier json avec toutes les données de l'API (serveur éteint après 21H)
 
 - /router
 	--> Fichier permettant de naviguer entre les différentes routes
 
 - /store
-	--> Fichier permettant d'éxécuter des tâches en arrière plan / stockage de données avec accès partagé
-	- Connexion à l'API
+	--> Fichier permettant d'exécuter des tâches en arrière-plan / stockage de données avec accès partagé
+	- Connexion a l'API
 	- Récupération et stockage des données
 
 - /views
