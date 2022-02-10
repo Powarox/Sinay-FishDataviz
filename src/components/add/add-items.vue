@@ -11,17 +11,17 @@
             </div>
             <div class="item">
                 <label for="faoCode">Fao code: </label>
-                <input id="faoCode" type="text" name="" value="">
+                <input id="faoCode" type="text" maxlength="3" style="text-transform: uppercase" v-model="data['faoCode']">
             </div>
             <div class="item">
                 <label for="frenchName">French name: </label>
-                <input id="frenchName" type="text" name="" value="">
+                <input id="frenchName" type="text" v-model="data['frenchName']">
             </div>
             <div class="item">
                 <label for="scientificName">Scientific name: </label>
-                <input id="scientificName" type="text" name="" value="">
+                <input id="scientificName" type="text" v-model="data['scientificName']">
             </div>
-            <button type="submit" name="button">Add</button>
+            <button @click="submitForm()">Add</button>
         </div>
     </div>
 
@@ -47,16 +47,28 @@
 </template>
 
 <script>
+    import { mapActions } from 'vuex';
+
     export default {
         name: 'AddItems',
         data() {
             return {
                 popup: false,
+                data: { 'faoCode': '', 'frenchName': '', 'scientificName': '' },
             }
         },
         methods: {
+            ...mapActions(['createNewData']),
+
             change() {
                 this.popup = !this.popup;
+            },
+            submitForm() {
+                this.data.faoCode = this.data.faoCode.toUpperCase();
+                if(this.data.faoCode !== '' && this.data.frenchName !== '' && this.data.scientificName !== ''){
+                    this.createNewData(this.data);
+                    this.change();
+                }
             }
         },
     }

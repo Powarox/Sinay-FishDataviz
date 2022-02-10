@@ -28,10 +28,16 @@ export default {
                 })
                 .finally(() => commit('UPDATEDATA', data) );
         },
+        createNewData({commit}, data){
+            commit('ADDNEWDATA', data);
+        }
     },
     mutations: {
         UPDATEDATA(state, data) {
             state.data = data;
+        },
+        ADDNEWDATA(state, data){
+            state.data.push(data);
         },
     }
 }
