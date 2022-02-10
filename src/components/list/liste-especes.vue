@@ -35,9 +35,6 @@
                 selected: 'faoCode',
             }
         },
-        methods: {
-
-        },
         computed: {
             ...mapGetters(['getData']),
 
@@ -94,6 +91,7 @@
         border-radius: 10px;
     }
 
+/* --- Responsive --- */
     @media (max-width: 1100px){
         .contentList {
             margin: 50px 5%;

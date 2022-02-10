@@ -40,6 +40,7 @@
             'order', 'englishName', 'frenchName', 'spanishName',
         ],
         methods: {
+            // Random image
             getImgUrl() {
                 let num = this.id % 9;
                 return require('../../assets/fish/img'+num+'.jpg');
@@ -105,14 +106,7 @@
         width: 30px;
     }
 
-    /* @keyframes breathing {
-      0% { -webkit-transform: scale(0.9); -ms-transform: scale(0.9); transform: scale(0.9); }
-      25% { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); }
-      50% { -webkit-transform: scale(0.9); -ms-transform: scale(0.9); transform: scale(0.9); }
-      75% { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); }
-      100% { -webkit-transform: scale(0.9); -ms-transform: scale(0.9); transform: scale(0.9); }
-    } */
-
+/* --- Responsive --- */
     @media (max-width: 500px){
         .bottom {
             flex-wrap: wrap;
@@ -132,4 +126,13 @@
             wrap: wrap;
         }
     }
+
+/* --- Animation chargement image --- */
+    /* @keyframes breathing {
+      0% { -webkit-transform: scale(0.9); -ms-transform: scale(0.9); transform: scale(0.9); }
+      25% { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); }
+      50% { -webkit-transform: scale(0.9); -ms-transform: scale(0.9); transform: scale(0.9); }
+      75% { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); }
+      100% { -webkit-transform: scale(0.9); -ms-transform: scale(0.9); transform: scale(0.9); }
+    } */
 </style>

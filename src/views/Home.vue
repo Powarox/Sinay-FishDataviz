@@ -15,14 +15,6 @@
         components: {
             ListEspeces, AddItems,
         },
-        data() {
-            return {
-
-            }
-        },
-        methods: {
-
-        },
         computed: {
             ...mapGetters(['getData']),
             data() {
@@ -38,6 +30,7 @@
         background: var(--body-grey-color);
     }
 
+/* --- Responsive --- */
     @media (max-width: 600px){
         #home {
             padding: 20px;

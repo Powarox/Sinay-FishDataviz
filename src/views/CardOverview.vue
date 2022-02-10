@@ -15,17 +15,9 @@
         components: {
             CardEspeces, AddItems,
         },
-        data() {
-            return {
-
-            }
-        },
-        methods: {
-
-        },
         computed: {
             ...mapGetters([
-                'getLoadData', 'getLoadPrice', 'getData'
+                'getData',
             ]),
             data() {
                 return this.getData;
@@ -40,6 +32,7 @@
         background: var(--body-grey-color);
     }
 
+/* --- Responsive --- */
     @media (max-width: 500px){
         #cardOverview {
             padding: 5px;

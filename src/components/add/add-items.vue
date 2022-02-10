@@ -23,7 +23,6 @@
             </div>
 
             <span @click="showAll" v-if="!show">Show more ...</span>
-
             <span @click="showAll" v-if="show">Show less ...</span>
 
             <div class="item" v-if="show">
@@ -69,6 +68,7 @@
             showAll() {
                 this.show = !this.show;
             },
+            // Add new item to list (local jusqu'au prochain reload page)
             submitForm() {
                 this.data.faoCode = this.data.faoCode.toUpperCase();
                 if(this.data.faoCode !== '' && this.data.frenchName !== '' && this.data.scientificName !== ''){
@@ -189,6 +189,7 @@
         border: 2px solid var(--main-button-color);
     }
 
+/* --- Responsive --- */
     @media (max-width: 900px){
         .addListForm {
             left: 25%;

@@ -91,6 +91,7 @@
         border: 2px solid var(--main-white-color);
     }
 
+/* --- Responsive --- */
     @media (max-width: 1000px){
         button {
             width: 120px;

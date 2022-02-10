@@ -37,9 +37,6 @@
                 selected: 'faoCode',
             }
         },
-        methods: {
-
-        },
         computed: {
             filters(){
                 if(this.filter !== '' && this.selected === 'faoCode') {
@@ -74,6 +71,7 @@
         color: var(--main-font-color);
     }
 
+/* --- Responsive --- */
     @media (max-width: 1450px){
         .contentCard {
             grid-template-columns: 1fr 1fr;

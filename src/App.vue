@@ -62,7 +62,8 @@
         list-style-type: none;
         outline: none;
     }
-/* --- Colors --- */
+
+/* --- Global var color --- */
     :root {
         --main-font-color: #425486;
         --main-button-color: #41B883;
@@ -118,6 +119,7 @@
         border-bottom: 3px solid var(--main-white-color);
     }
 
+/* --- Responsive --- */
     @media (max-width: 950px){
         .navigation {
             padding: 20px 5%;

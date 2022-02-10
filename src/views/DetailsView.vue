@@ -8,6 +8,7 @@
         <p>English Name : {{ this.data.englishName }}</p>
         <p>Spanish Name : {{ this.data.spanishName }}</p><br>
         <p>Scientific Name : {{ this.data.scientificName }}</p>
+        <img :src="getImgUrl()" alt="">
     </div>
 </template>
 
@@ -16,19 +17,22 @@
 
     export default {
         name: 'DetailsView',
-        props: ['id'],
-        data() {
-            return {
-                result: {},
-            }
-        },
+        props: ['id', 'code'],
         methods: {
-
+            getImgUrl() {
+                let num = this.id % 9;
+                return require('../assets/fish/img'+num+'.jpg');
+            },
         },
         computed: {
             ...mapGetters(['getData']),
             data() {
-                return this.getData[this.id];
+                for(let i in this.getData) {
+                    if(this.getData[i].faoCode === this.code){
+                        return this.getData[i];
+                    }
+                }
+                return 0;
             },
         }
     }
