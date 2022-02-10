@@ -188,4 +188,22 @@
         background: var(--main-button-color);
         border: 2px solid var(--main-button-color);
     }
+
+    @media (max-width: 900px){
+        .addListForm {
+            left: 25%;
+        }
+    }
+
+    @media (max-width: 700px){
+        .addListForm {
+            left: 2%;
+        }
+    }
+
+    @media (max-width: 475px){
+        .addListForm .item input {
+            width: 200px;
+        }
+    }
 </style>

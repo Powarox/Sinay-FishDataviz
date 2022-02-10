@@ -41,8 +41,7 @@
         ],
         methods: {
             getImgUrl() {
-                let num = this.id % 9
-                console.log(num);
+                let num = this.id % 9;
                 return require('../../assets/fish/img'+num+'.jpg');
             },
         },

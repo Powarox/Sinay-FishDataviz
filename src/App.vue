@@ -2,7 +2,6 @@
     <header>
         <nav class="navigation">
             <router-link to="/" id="logo">
-                <!-- <img src="./assets/header/sinay-logo.png" alt="Logo"> -->
                 <img src="./assets/header/logo_banner.svg" alt="Logo">
             </router-link>
 
@@ -11,7 +10,6 @@
                 <router-link to="/CardOverview" :class="{activePage: card}" @click="switchPage('card')">Card views</router-link>
             </section>
         </nav>
-        <!-- <img src="./assets/header/banner.svg" id="banner" alt="une bannière"> -->
     </header>
 
     <main class="main">
