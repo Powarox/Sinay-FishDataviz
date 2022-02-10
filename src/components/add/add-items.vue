@@ -21,30 +21,31 @@
                 <label for="scientificName">Scientific name: </label>
                 <input id="scientificName" type="text" v-model="data['scientificName']">
             </div>
-            
+
+            <span @click="showAll" v-if="!show">Show more ...</span>
+
+            <span @click="showAll" v-if="show">Show less ...</span>
+
+            <div class="item" v-if="show">
+                <label for="family">Family: </label>
+                <input id="family" type="text" v-model="data['family']">
+            </div>
+            <div class="item" v-if="show">
+                <label for="order">Order: </label>
+                <input id="order" type="text" v-model="data['order']">
+            </div>
+            <div class="item" v-if="show">
+                <label for="englishName">English name: </label>
+                <input id="englishName" type="text" v-model="data['englishName']">
+            </div>
+            <div class="item" v-if="show">
+                <label for="spanishName">Spanish name: </label>
+                <input id="spanishName" type="text" v-model="data['spanishName']">
+            </div>
+
             <button @click="submitForm()">Add</button>
         </div>
     </div>
-
-    <!-- <div class="">
-        <label for="family">Family: </label>
-        <input id="family" type="text" name="" value="">
-    </div>
-
-    <div class="">
-        <label for="order">Order: </label>
-        <input id="order" type="text" name="" value="">
-    </div>
-
-    <div class="">
-        <label for="englishName">English name: </label>
-        <input id="englishName" type="text" name="" value="">
-    </div>
-
-    <div class="">
-        <label for="spanishName">Spanish name: </label>
-        <input id="spanishName" type="text" name="" value="">
-    </div> -->
 </template>
 
 <script>
@@ -54,6 +55,7 @@
         name: 'AddItems',
         data() {
             return {
+                show: false,
                 popup: false,
                 data: { 'faoCode': '', 'frenchName': '', 'scientificName': '' },
             }
@@ -63,6 +65,9 @@
 
             change() {
                 this.popup = !this.popup;
+            },
+            showAll() {
+                this.show = !this.show;
             },
             submitForm() {
                 this.data.faoCode = this.data.faoCode.toUpperCase();
@@ -79,7 +84,7 @@
     .addListForm {
         padding: 20px;
         position: fixed;
-        top: 35%;
+        top: 33%;
         left: 35%;
         display: grid;
         grid-gap: 10px;
@@ -107,6 +112,17 @@
         color: var(--main-button-color);
         background: var(--main-white-color);
         border: 2px solid var(--main-white-color);
+    }
+
+    .addListForm span {
+        margin: 5px auto;
+        color: var(--dark-grey-color);
+        font-style: italic;
+        cursor: pointer;
+    }
+
+    .addListForm span:hover {
+        color: var(--main-red-color);
     }
 
     .addListForm .item {
